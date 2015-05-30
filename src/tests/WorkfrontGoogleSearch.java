@@ -25,16 +25,4 @@ public class WorkfrontGoogleSearch extends SeleniumDriver {
 		assertTrue("Worfront in the first place in the shearch resultes!",
 			googleMainPage.getResultsFirstItem().getText().contains("Project Management Software – Workfront – Formerly AtTask"));
 	}
-
-	@Test
-	public void checkNavigation(){
-		googleMainPage.openGoogle();
-		googleMainPage.makeSecarch("Workfront");
-		googleMainPage.clickOnSearch();
-
-		googleMainPage.getResultsFirstItem().click();
-
-
-	}
-
 }
