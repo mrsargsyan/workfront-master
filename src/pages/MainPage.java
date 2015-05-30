@@ -22,11 +22,17 @@ public class MainPage  extends SeleniumDriver {
 
 	//Method to find request a trial button and click
 	public void clickOnRequestTrial() {
+		driver.findElement(By.cssSelector(".btn-trial")).click();
 
 	}
 
 	//Method to find submit request a trial button and click
 	public void submitRequestTrial() {
+		driver.findElement(By.cssSelector(".btn-lg")).click();
 
+	}
+
+	public boolean isErrorVisible(){
+		return driver.findElement(By.cssSelector(".help-block")).getText().contains("First Name must not be empty");
 	}
 }
